@@ -1,0 +1,22 @@
+body {
+    margin: 0;
+    line-height: normal;
+  }
+  
+  :root {
+    /* fonts */
+    --font-dancing-script: "Dancing Script";
+  
+    /* font sizes */
+    --font-size-39xl: 58px;
+  
+    /* Colors */
+    --color-white: #fff;
+    --color-royalblue: #6377e4;
+  
+    /* border radiuses */
+    --br-xl: 20px;
+    --br-6xl: 25px;
+    --br-3xs: 10px;
+  }
+  
