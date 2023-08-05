@@ -1,3 +1,4 @@
+// require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const route = require('./routes/user');
@@ -42,7 +43,7 @@ function startServer() {
 
 // startServer();
 function connectToDB() {
-    mongoose.connect("mongodb+srv://<username>:<password>@<cluster_name>.ac4hnj7.mongodb.net/<database_name>?retryWrites=true&w=majority", {
+    mongoose.connect("mongodb+srv://atharvmirgal09:atharv_rashi_artahsahriv__03098X1wSNM-5d@timetracker.ac4hnj7.mongodb.net/timetracker?retryWrites=true&w=majority", {
         useNewUrlParser: true,
         useUnifiedTopology: true
     }).then(() => {
