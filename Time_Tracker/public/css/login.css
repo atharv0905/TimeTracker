@@ -1,0 +1,136 @@
+*{
+    background-color: #6E6E6E;
+    /* overflow-y: hidden; */
+}
+body{
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+.nav-btn{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.nav-btn:hover{
+    background-color: #BAFF39;
+    color: black;
+}
+#logo{
+    position: fixed;
+    width: 300px;
+}
+#nav-links{
+    position: fixed;
+    right: 10px;
+    top: 0;
+    margin-top: 30px;
+    font-size: 30px;
+}
+#container{
+    top: 20%;
+    bottom: 0%;
+}
+#hourglass{
+    position: fixed;
+    bottom: 0%;
+    height: 89%;
+    width: 100%;
+    right: 0%;
+    z-index: 0;
+    opacity: 1;
+}
+#form-container{
+    background-color: #797777;
+    position: relative;
+    top: 100px;
+    left: calc(50% - 250px);
+    width: 500px;
+    height: 620px;
+    border-radius: 20px;
+    opacity: 0.85;
+    z-index: 1;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px; 
+}
+#login-text{
+    position: relative;
+    background-color: #797777;
+    color: #BAFF39;
+    font-size: 50px;
+    font-weight: bold;
+    z-index: 2;
+    left: calc(50% - 80px);
+    top: 100px;
+}
+#_id{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 50px;
+    top: 150px;
+    left: calc(50% - 200px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#password{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 400px;
+    height: 50px;
+    top: 170px;
+    left: calc(50% - 200px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#login-btn{
+    z-index: 2;
+    position: relative;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #BAFF39;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    border-color: #BAFF39;
+    left: calc(50% - 75px);
+    top: 250px;
+}
+#forgot-password-link{
+    background-color: #797777;
+    z-index: 2;
+    position: relative;
+    top: 110px;
+    left: calc(50% - 190px);
+    text-decoration: none;
+}
+#forgot-password-link-text{
+    background-color: #797777;
+    font-size: 22px; 
+    width: fit-content;
+}
+#signup-link{
+    background-color: #797777;
+    z-index: 2;
+    position: relative;
+    top: 230px;
+    left: calc(50% - 180px);
+    text-decoration: none;
+}
+#signup-link-text{
+    background-color: #797777;
+    font-size: 22px; 
+    width: fit-content;
+}

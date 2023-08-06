@@ -3,15 +3,32 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Login Page</title>
+    <title>Login</title>
+    <link rel="stylesheet" href="/static/css/login.css">
 </head>
 <body>
-    <form action="/user/login" method="post">
-        <label for="_id">Username</label>
-        <input type="text" name="_id" id="_id" placeholder="Username">
-        <label for="password">Password</label>
-        <input type="password" name="password" id="password" placeholder="Password">
-        <input type="submit" value="Login">
-    </form>
+    <nav id="navbar">
+        <img id="logo" src="/static/images/time_tracker_logo.jpg" alt="" srcset="">
+        <div id="nav-links">
+            <a class="nav-btn"href="#">Home</a>
+            <a class="nav-btn"href="#">About Us</a>
+            <a class="nav-btn"href="#">Analysis</a>
+            <a class="nav-btn"href="#">Start Now</a>
+            <a class="nav-btn"href="#">Sign Up/ Login</a>
+        </div>
+    </nav>
+    <div id="container">
+        <div id="form-container">
+            <span id="login-text">LOGIN</span>
+            <form action="/user/login" method="POST">
+                <input id="_id" type="text" name="_id" placeholder="  Username" required>
+                <input id="password" type="password" name="password" placeholder="  Password" required>
+                <input id="login-btn" type="submit" value="LOGIN">
+            </form>
+            <a id="forgot-password-link" href="#"><h1 id="forgot-password-link-text">Forgot Password?</h1></a>
+            <a id="signup-link" href="#"><h1 id="signup-link-text">Don't have an account? Sign Up</h1></a>
+        </div>
+        <img id="hourglass" src="/static/images/hourglass.png" alt="" srcset="">    
+    </div>
 </body>
 </html>
