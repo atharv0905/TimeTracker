@@ -22,5 +22,4 @@ router.get('/myAccount', (req, res) => {
     res.send('My Account');
 });
 
-
 module.exports = router;

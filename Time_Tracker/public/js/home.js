@@ -8,7 +8,28 @@ fetch('/user/getUserById')
 
 setTimeout(() => {
     if(fetchedData){
-        document.querySelector('#login-btn').textContent = 'My Account';
-        document.querySelector('#login-btn').setAttribute('href', '/file/myAccount');
+        document.querySelector('#loginBtn').textContent = 'My Account';
+        document.querySelector('#loginBtn').setAttribute('href', '/file/myAccount');
     }
-}, 1000);
+}, 100);
+
+trackNowBtn = document.querySelector('#trackNowBtn');
+
+const checkIfLoggedIn = () => {
+    if(fetchedData){
+        return true;
+    }
+};
+trackNowBtn.addEventListener('mouseover', (e) => {
+    if(!checkIfLoggedIn()){
+        console.log('Login in to track now');
+    }
+});
+trackNowBtn.addEventListener('click', (e) => {
+    if(checkIfLoggedIn()){
+        trackNowBtn.setAttribute('href', '/tracker');
+    }
+    else{
+        trackNowBtn.setAttribute('href', '/login');
+    }
+});

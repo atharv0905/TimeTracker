@@ -1,4 +1,3 @@
-// require('dotenv').config();
 const express = require('express');
 const mongoose = require('mongoose');
 const route = require('./routes/user');
@@ -27,10 +26,15 @@ async function deleteTaskOfAllUsers() {
 }
 
 setInterval(async () => {
+    function daysInMonth(y, m) {
+        return  new Date(y, m +1, 0).getDate();
+      }
     let time = new Date();
     let hours = time.getHours();
     let mins = time.getMinutes();
-    if (hours === 23 && mins === 59) {
+    let today = time.getDate();
+    let lastDay = daysInMonth(time.getFullYear(), time.getMonth());
+    if (today === lastDay && hours === 23 && mins === 59) {
         await deleteTaskOfAllUsers();
     }
 }, 1000);
@@ -55,5 +59,6 @@ function connectToDB() {
 }
 
 connectToDB();
+
 
 

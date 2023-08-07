@@ -24,7 +24,10 @@ let stopClicked = 'default';
 let timeTaken;
 let currentTask;
 let currentTaskId;
-// console.log(currentTaskId);
+let currentDate = new Date();
+currentDate = currentDate.getDate() + '_' + (currentDate.getMonth() + 1) + '_' + currentDate.getFullYear();
+let dateTaskList = {
+};
 let taskList = {
 };
 
@@ -56,36 +59,21 @@ function display(tasklist) {
     }
 }
 
-// setInterval(() => {
-//     console.log(`fetchedData: ${fetchedData.tasks}`);
-//     if (fetchedData.tasks !== undefined) {
-//         taskList = fetchedData.tasks;
-
-//         for (const [key, value] of Object.entries(taskList)) {
-//             console.log(key, value);
-//         }
-//         display(taskList);
-//     }
-// }, 2000);
-
 setTimeout(() => {
     // console.log(`fetchedData: ${fetchedData.tasks}`);
-    if (fetchedData.tasks !== undefined) {
-        taskList = fetchedData.tasks;
-
-        // for (const [key, value] of Object.entries(taskList)) {
-        //     console.log(key, value);
-        // }
-        if(taskList[Object.keys(taskList).length-1].endTime === 0) {
+    console.log(`currentDate: ${currentDate}`);
+    if (fetchedData.tasks[currentDate] !== undefined) {
+        taskList = fetchedData.tasks[currentDate];
+        if (taskList[Object.keys(taskList).length - 1].endTime === 0) {
             console.log("Task is running");
-            startClicked = taskList[Object.keys(taskList).length-1].startTime;
+            startClicked = taskList[Object.keys(taskList).length - 1].startTime;
             startClicked = new Date(startClicked);
             console.log(startClicked);
         }
         display(taskList);
         currentTaskId = Object.keys(taskList).length - 1;
     }
-}, 3000);
+}, 100);
 
 
 Urgent_ImportantBtn.addEventListener('click', (e) => {
@@ -117,7 +105,7 @@ function start() {
     console.log('start');
     if (inputField.value === '') {
         message.textContent = 'Please enter a task';
-        display(taskList);  
+        display(taskList);
         return;
     }
     if (taskType === '') {
@@ -138,10 +126,11 @@ function start() {
         "time": 0,
         "type": taskType
     };
+    dateTaskList[currentDate] = taskList;
     display(taskList);
-    sendData(taskList);
+    sendData(dateTaskList);
 }
-function stop(){
+function stop() {
     console.log('stop');
     if (startClicked === '') {
         message.textContent = 'Please start a task before stopping it';
@@ -161,7 +150,7 @@ function stop(){
     startClicked = '';
     stopClicked = '';
     display(taskList);
-    sendData(taskList);
+    sendData(dateTaskList);
 }
 
 startBtn.addEventListener('click', () => {
