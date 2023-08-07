@@ -1,0 +1,30 @@
+*{
+    background-color: #6E6E6E;
+}
+body{
+    overflow-y: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+.nav-btn{
+    text-decoration: none;
+    color: white;
+    padding: 15px;
+    padding-left: 35px;
+    padding-right: 35px;
+}
+.nav-btn:hover{
+    background-color: #BAFF39;
+    color: black;
+}
+#logo{
+    position: fixed;
+    width: 300px;
+}
+#nav-links{
+    position: fixed;
+    right: 10px;
+    top: 0;
+    margin-top: 30px;
+    font-size: 30px;
+}

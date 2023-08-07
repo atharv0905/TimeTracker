@@ -1,0 +1,177 @@
+body{
+    overflow-y: hidden;
+    overflow-x: hidden;
+    font-family: 'Roboto', sans-serif;
+    font-size: 30px;
+}
+#container{
+    top: 20%;
+    bottom: 0%;
+}
+#hourglass{
+    position: fixed;
+    bottom: 0%;
+    height: 89%;
+    width: 100%;
+    right: 0%;
+    z-index: 0;
+    opacity: 1;
+}
+#form-container{
+    background-color: #797777;
+    position: relative;
+    top: 100px;
+    left: calc(50% - 600px);
+    width: 1200px;
+    height: 620px;
+    border-radius: 20px;
+    opacity: 0.85;
+    z-index: 1;
+    border-style: solid;
+    border-color: white;
+    border-width: 5px; 
+}
+#register-text{
+    position: relative;
+    background-color: #797777;
+    color: #BAFF39;
+    font-size: 45px;
+    font-weight: bold;
+    z-index: 2;
+    left: calc(50% - 120px);
+    top: 50px;
+}
+#name{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 450px;
+    height: 50px;
+    top: 120px;
+    left: calc(18% - 200px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#name-label{
+    z-index: 2;
+    background-color: #797777;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 70px;
+    left: calc(18% - 90px);
+}
+#_id{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 450px;
+    height: 50px;
+    top: 63px;
+    left: calc(70% - 220px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#username-label{
+    z-index: 2;
+    background-color: #797777;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 70px;
+    left: calc(14% - 110px);
+}
+#email{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 450px;
+    height: 50px;
+    top: 190px;
+    left: calc(14% - 760px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#email-label{
+    z-index: 2;
+    background-color: #797777;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 140px;
+    left: calc(14% - 510px);
+}
+#password{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 450px;
+    height: 50px;
+    top: 260px;
+    left: calc(14% - 220px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#password-label{
+    z-index: 2;
+    background-color: #797777;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 210px;
+    left: calc(14% - 40px);
+}
+#confirm-password{
+    z-index: 2;
+    background-color: white;
+    position: relative;
+    width: 450px;
+    height: 50px;
+    top: 203px;
+    left: calc(70% - 220px);
+    border-radius: 20px;
+    border-color: #BAFF39;
+    border-style: solid;
+    border-width: 3px;
+    font-size: 30px;
+}
+#confirm-password-label{
+    z-index: 2;
+    background-color: #797777;
+    font-size: 35px;
+    font-weight: bold;
+    color: white;
+    position: relative;
+    top: 210px;
+    /* left: calc(10% - 0px); */
+}
+#login-btn{
+    z-index: 2;
+    position: relative;
+    padding: 10px;
+    padding-left: 25px;
+    padding-right: 25px;
+    background-color: #BAFF39;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    border-color: #BAFF39;
+    left: calc(50% - 570px);
+    top: 300px;
+}
