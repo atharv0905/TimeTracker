@@ -1,44 +1,33 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Home</title>
     <link rel="stylesheet" href="/static/css/home.css">
-    <link rel="stylesheet" href="/static/css/global.css">
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dancing Script:wght@600&display=swap" />
+    <link rel="stylesheet" href="/static/css/nav.css">
 </head>
-
 <body>
-    <div class="background">
-        <img src="/static/images/background.png" alt="" srcset="" id="bg_img">
-        <center>
-            <p id="time-management">Time Management</p>
-        </center>
-        <div class="inputBox">
-            <input type="text" id="inputField">
-            <span id="rectangle" class="">task</span>
-            <input type="button" value="start" id="startBtn" class="btn">
-            <input type="button" value="stop" id="stopBtn" class="btn">
+    <nav id="navbar">
+        <img id="logo" src="/static/images/time_tracker_logo.jpg" alt="" srcset="">
+        <div id="nav-links">
+            <a class="nav-btn"href="/">Home</a>
+            <a class="nav-btn"href="#">About Us</a>
+            <a class="nav-btn"href="#">Analysis</a>
+            <a class="nav-btn"href="/tracker">Start Now</a>
+            <a class="nav-btn" id ="login-btn" href="/login">Sign Up/ Login</a>
         </div>
-        <div class="displayBox">
+    </nav>
+    <div id="container">
+        <img id="clock-img" src="/static/images/clock.jpg" alt="" srcset="">
+        <div id="text">
+            <p id="line-1">The Space</p>
+            <p id="line-2">For Time</p>
+            <p id="line-3">Lovers</p>
+            <!-- <input id="start-now-btn" type="button" value="Start Now"> -->
+            <a href="/login"><input id="start-now-btn" type="button" value="Start Now"></a>
         </div>
     </div>
-    <div class="container">
-        <p id="message" class="fadeInOut"></p>
-    </div>
-    <div class="buttonContainer">
-        <input type="button" value="Urgent/
-Important" id="Urgent_Important" class="tasknes">
-        <input type="button" value="Urgent/
-Not Important" id="Urgent_NotImportant" class="tasknes">
-        <input type="button" value="Not Urgent/
-Important" id="NotUrgent_Important" class="tasknes">
-        <input type="button" value="Not Urgent/
-Not Important" id="NotUrgent_NotImportant" class="tasknes">
-    </div>
-    <script src="../static/js/home.js"></script>
+    <script src="/static/js/home.js"></script>
 </body>
-
 </html>

@@ -12,7 +12,7 @@ app.use('/static',express.static('public'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use('/user', route.router);
-app.use('/file', file);
+app.use('/', file);
 
 async function deleteTaskOfAllUsers() {
     try{
